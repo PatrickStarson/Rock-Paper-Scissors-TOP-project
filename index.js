@@ -1,11 +1,15 @@
-  //CREATE a variable randomNumber that will contain the random number
+
+
+  let humanScore = 0;
+  let computerScore = 0;
+  const randomNumber = Math.random();
+
+    //CREATE a variable randomNumber in global scope, that will contain the random number.
   
   //CREATE a function getComputerChoice
   //IF the randomNuber is between 0 and 3,33 make the function return a string 'Rock'  
   //ELSE IF the randomNuber is between 3.33 and 6,66 make the function return a string 'Paper'
   //ELSE make the function return a string 'Scissors'
-
-const randomNumber = Math.random();
 
 function getComputerChoice() {
   if (randomNumber < 0.33) {
@@ -30,3 +34,8 @@ function getHumanChoice () {
 }
 
 console.log(getHumanChoice())
+
+//CREATE variable for humanScore in global scope and give it a value of 0. This will be used to keep score for the human.
+//CREATE variable for computerScore in global scope and give it a value of 0. This will be used to keep score for the human.
+
+
