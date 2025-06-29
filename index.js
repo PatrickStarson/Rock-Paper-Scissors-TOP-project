@@ -38,7 +38,13 @@ console.log(getHumanChoice())
 //CREATE a function named playRound. It will compare players and computers choices and determin who winns.
 //
 
-function playRound (humanChoice = getHumanChoice(), computerChoice = getComputerChoice()) {
+function playRound (humanChoice, computerChoice) {
 
+};
 
-}
+//DECLAIR variables for what moves human and computer select and asign getHumanChoice and getComputerChoice to them.
+//CALL playRound function with variables above as arguments.
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
