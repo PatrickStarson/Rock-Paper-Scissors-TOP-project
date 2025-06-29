@@ -19,18 +19,12 @@ function getComputerChoice() {
    
 };
 
-console.log(getComputerChoice());
-
-
-
 
 //CREATE a function getHumanChoice.
 //RETURN whatever the player has chosen and typed in the prompt.
 function getHumanChoice () {
   return prompt('Choose your move').toLowerCase();
 }
-
-console.log(getHumanChoice())
 
 //DECLAIR variable for humanScore in global scope and give it a value of 0. This will be used to keep score for the human.
 //DECLAIR variable for computerScore in global scope and give it a value of 0. This will be used to keep score for the human.
@@ -39,7 +33,46 @@ console.log(getHumanChoice())
 //
 
 function playRound (humanChoice, computerChoice) {
+  if (humanChoice === 'rock' && computerChoice === 'rock') {
+    console.log('You chose Rock and computer chose Rock.')
+    console.log('Rock cannot beat another Rock. It is a Tie!')
+  } else if(humanChoice ==='rock' && computerChoice === 'paper') {
+    console.log('You chose Rock and computer chose Paper.')
+    console.log('Paper beats Rock. You loose!');
+    computerScore ++ 
+  } else if(humanChoice === 'rock' && computerChoice === 'scissors') {
+    console.log('You chose Rock and computer chose Scissors.')
+    console.log('Rock beats Scissors. You win!')
+    humanScore ++
+  };
 
+  if (humanChoice === 'paper' && computerChoice === 'paper') {
+    console.log('You chose Paper and computer chose Paper.')
+    console.log('Paper cannot beat another paper. It is a Tie!')
+  } else if(humanChoice ==='paper' && computerChoice === 'rock') {
+    console.log('You chose Paper and computer chose Rock.')
+    console.log('Paper beats Rock. You win!')
+    humanScore ++
+  } else if(humanChoice === 'paper' && computerChoice === 'scissors') {
+    console.log('You chose Paper and computer chose Scissors.')
+    console.log('Scissors beats Paper. You loose!')
+    computerScore ++
+  };
+
+  if (humanChoice === 'scissors' && computerChoice === 'scissors') {
+    console.log('You chose Scissors and computer chose Scissors.')
+    console.log('Scissors cannot beat another scissors. It is a Tie!')
+  } else if(humanChoice ==='scissors' && computerChoice === 'paper') {
+    console.log('You chose Scissors and computer chose Paper.')
+    console.log('Scossors beats paper. You win!')
+    humanScore ++
+  } else if(humanChoice === 'scissors' && computerChoice === 'rock') {
+    console.log('You chose Scissors and computer chose Rockg.')
+    console.log('Rock beats scissors. You loose!')
+    computerScore ++
+  };
+
+  console.log(`Human: ${humanScore} Computer: ${computerScore}`);
 };
 
 //DECLAIR variables for what moves human and computer select and asign getHumanChoice and getComputerChoice to them.
