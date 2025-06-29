@@ -17,3 +17,15 @@ function getComputerChioce() {
 };
 
 console.log(getComputerChioce());
+
+
+// CREATE a function named getHumanChoice
+// CREATE a prompt method to get user's input
+// RETURN what the user enters into the prompt
+
+function getHumanChoice() {
+  return prompt()
+};
+
+console.log(getHumanChoice());
+
