@@ -29,3 +29,7 @@ function getHumanChoice() {
 
 console.log(getHumanChoice());
 
+// DECLAIR to variables humanScore and computerScore, both with value of 0.
+
+let humanScore = 0;
+let computerScore = 0;
