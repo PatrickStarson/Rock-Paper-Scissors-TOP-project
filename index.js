@@ -33,3 +33,13 @@ console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
+
+
+// CREATE a functions named playRound with parameters humanChoice and computerChoice.
+// DECLAIRE variables humanSelection and computerSelection after the playRound function and asign getHumanChoice and getComputerChoice to them.
+// PASS humanSelection and computerSelection as arguments to playRound function.
+// MAKE humanChoice input case-insensitive by adding toLowerCase() method.
+// IF humanChoice es equal to computerChoice log a string "It's a Tie!" in the console.
+// ELSE IF humanChoice beats computerChoice log a string `You win! ${humanChoice} beats ${computerChoice}.` in the console and increment humanScore by 1.
+// ELSE IF computerChoice beats humanChoice log a string `You lose! ${computerChoice} beats ${humanChoice}.` in the console and increment computerScore by 1.
+
