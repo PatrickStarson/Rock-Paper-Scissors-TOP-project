@@ -16,7 +16,7 @@ function getComputerChioce() {
   }
 };
 
-console.log(getComputerChioce());
+
 
 
 // CREATE a function named getHumanChoice
@@ -27,7 +27,7 @@ function getHumanChoice() {
   return prompt().toLowerCase();
 };
 
-console.log(getHumanChoice());
+
 
 // DECLAIR to variables humanScore and computerScore, both with value of 0.
 
@@ -38,12 +38,29 @@ let computerScore = 0;
 // CREATE a functions named playRound with parameters humanChoice and computerChoice.
 // DECLAIRE variables humanSelection and computerSelection after the playRound function and asign getHumanChoice and getComputerChoice to them.
 // PASS humanSelection and computerSelection as arguments to playRound function.
-// MAKE humanChoice input case-insensitive by adding toLowerCase() method. You can add the method to the prompt in getHumanChoice function
+// MAKE humanChoice input case-insensitive by adding toLowerCase() method. You can add the method to the prompt in getHumanChoice function.
 // IF humanChoice es equal to computerChoice log a string "It's a Tie!" in the console.
 // ELSE IF humanChoice beats computerChoice log a string `You win! ${humanChoice} beats ${computerChoice}.` in the console and increment humanScore by 1.
 // ELSE IF computerChoice beats humanChoice log a string `You lose! ${computerChoice} beats ${humanChoice}.` in the console and increment computerScore by 1.
 
+
 function playRound (humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log("It's a Tie.")
+  } else if (
+    humanChoice === 'rock' && computerChoice === 'scissors' ||
+    humanChoice === 'paper' && computerChoice === 'rock' ||
+    humanChoice === 'scissors' && computerChoice === 'paper') {
+      console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+      humanScore++;
+  } else {
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    computerScore++;
+  }
+
+  console.log(`Human: ${humanScore}`);
+  console.log(`Computer: ${computerScore}`);
+  
 }
 
 const humanSelection = getHumanChoice();
