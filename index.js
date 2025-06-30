@@ -24,7 +24,7 @@ console.log(getComputerChioce());
 // RETURN what the user enters into the prompt
 
 function getHumanChoice() {
-  return prompt()
+  return prompt().toLowerCase();
 };
 
 console.log(getHumanChoice());
@@ -38,8 +38,15 @@ let computerScore = 0;
 // CREATE a functions named playRound with parameters humanChoice and computerChoice.
 // DECLAIRE variables humanSelection and computerSelection after the playRound function and asign getHumanChoice and getComputerChoice to them.
 // PASS humanSelection and computerSelection as arguments to playRound function.
-// MAKE humanChoice input case-insensitive by adding toLowerCase() method.
+// MAKE humanChoice input case-insensitive by adding toLowerCase() method. You can add the method to the prompt in getHumanChoice function
 // IF humanChoice es equal to computerChoice log a string "It's a Tie!" in the console.
 // ELSE IF humanChoice beats computerChoice log a string `You win! ${humanChoice} beats ${computerChoice}.` in the console and increment humanScore by 1.
 // ELSE IF computerChoice beats humanChoice log a string `You lose! ${computerChoice} beats ${humanChoice}.` in the console and increment computerScore by 1.
 
+function playRound (humanChoice, computerChoice) {
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChioce();
+
+playRound(humanSelection, computerSelection)
