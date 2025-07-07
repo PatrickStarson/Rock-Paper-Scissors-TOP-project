@@ -28,6 +28,11 @@
 // MOVE playRound function and score variables into the playGame function.
 // WRITE a for loop that will run playRound function 5 times.
 
+
+
+
+
+
 function getComputerChioce() {
   const randomNumber = Math.random();
   if (randomNumber <= 0.33) {
@@ -45,12 +50,12 @@ function getHumanChoice() {
 };
 
 
-function playGame () {
+//function playGame () {
   
   let humanScore = 0;
   let computerScore = 0;
 
-  for(let i = 0; i < 5; i++) {
+  //for(let i = 0; i < 5; i++) {
     
     function playRound (humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
@@ -66,21 +71,21 @@ function playGame () {
     computerScore++;
   }
 
-  console.log(`Human: ${humanScore}`);
-  console.log(`Computer: ${computerScore}`);
+  //console.log(`Human: ${humanScore}`);
+  //console.log(`Computer: ${computerScore}`);
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChioce();
 
 playRound(humanSelection, computerSelection)
-};
+//};
 
   if(humanScore > computerScore) {
   console.log('The Human won!')
 } else {
   console.log('The Computer won!')
 }
-};
+//};
 
-playGame();
+//playGame();
