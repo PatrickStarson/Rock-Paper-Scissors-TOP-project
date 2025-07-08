@@ -29,65 +29,90 @@
 // WRITE a for loop that will run playRound function 5 times.
 
 
-
-const rockBtn = document.querySelector('#rock');
-const paperBtn = document.querySelector('#paper');
-const scissorsBtn = document.querySelector('#scissors');
+/*NEW BRANCH rps-ui*/
 
 
-function getComputerChioce() {
+
+let humanScore = 0;
+let computerScore = 0;
+
+function getComputerChoice() {
   const randomNumber = Math.random();
   if (randomNumber <= 0.33) {
     return 'rock';
-  } else if (randomNumber > 0.33 && randomNumber <= 0.66) {
+  } else if (randomNumber <= 0.66) {
     return 'paper';
   } else {
     return 'scissors';
   }
-};
+}
 
-
-function getHumanChoice() {
-  return prompt().toLowerCase();
-};
-
-
-//function playGame () {
-  
-  let humanScore = 0;
-  let computerScore = 0;
-
-  //for(let i = 0; i < 5; i++) {
-    
-    function playRound (humanChoice, computerChoice) {
+function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-    console.log("It's a Tie.")
+    console.log("It's a Tie.");
   } else if (
-    humanChoice === 'rock' && computerChoice === 'scissors' ||
-    humanChoice === 'paper' && computerChoice === 'rock' ||
-    humanChoice === 'scissors' && computerChoice === 'paper') {
-      console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
-      humanScore++;
+    (humanChoice === 'rock' && computerChoice === 'scissors') ||
+    (humanChoice === 'paper' && computerChoice === 'rock') ||
+    (humanChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+    humanScore++;
   } else {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
     computerScore++;
   }
 
-  //console.log(`Human: ${humanScore}`);
-  //console.log(`Computer: ${computerScore}`);
+  console.log(`Human: ${humanScore}`);
+  console.log(`Computer: ${computerScore}`);
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChioce();
+// Button event listeners:
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
 
-playRound(humanSelection, computerSelection)
-//};
+rockBtn.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  playRound('rock', computerSelection);
+});
 
+paperBtn.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  playRound('paper', computerSelection);
+});
+
+scissorsBtn.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  playRound('scissors', computerSelection);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
   if(humanScore > computerScore) {
   console.log('The Human won!')
 } else {
   console.log('The Computer won!')
 }
+  */
 //};
 
 //playGame();
