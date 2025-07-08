@@ -36,6 +36,9 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const result = document.querySelector('#result');
+const score = document.querySelector('#score');
+
 function getComputerChoice() {
   const randomNumber = Math.random();
   if (randomNumber <= 0.33) {
@@ -49,21 +52,26 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-    console.log("It's a Tie.");
+    result.textContent = ("It's a Tie.");
   } else if (
     (humanChoice === 'rock' && computerChoice === 'scissors') ||
     (humanChoice === 'paper' && computerChoice === 'rock') ||
     (humanChoice === 'scissors' && computerChoice === 'paper')
   ) {
-    console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+    result.textContent = (`You win! ${humanChoice} beats ${computerChoice}.`);
     humanScore++;
   } else {
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    result.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
     computerScore++;
   }
 
-  console.log(`Human: ${humanScore}`);
-  console.log(`Computer: ${computerScore}`);
+  score.textContent = (`Human: ${humanScore} | Computer: ${computerScore}`);
+  
+  if(humanScore === 5 ) {
+    result.textContent = (`Human won!`)
+  } else if(computerScore === 5) {
+    result.textContent = (`Computer won!`)
+  }
 }
 
 // Button event listeners:
