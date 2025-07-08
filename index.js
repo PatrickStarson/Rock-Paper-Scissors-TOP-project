@@ -93,34 +93,3 @@ scissorsBtn.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   playRound('scissors', computerSelection);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-  if(humanScore > computerScore) {
-  console.log('The Human won!')
-} else {
-  console.log('The Computer won!')
-}
-  */
-//};
-
-//playGame();
